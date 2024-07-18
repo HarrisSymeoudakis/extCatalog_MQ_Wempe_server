@@ -39,6 +39,7 @@ async function fetchCatalog() {
     const priceResponse = await axios.get(allPricesList, { headers });
 
     for (let i = 0; i < items.length; i++) {
+      console.log(priceResponse.data);
       items[i].price = priceResponse.data.priceLists[i];
     }
 
